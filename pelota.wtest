@@ -1,0 +1,9 @@
+import pgmProgram.*
+import objetos.*
+
+describe "pelota" {
+  test "description" {
+    pelota.irAlInicio()
+    assert.equals(game.at(0,0), pelota.position())
+  }
+}
