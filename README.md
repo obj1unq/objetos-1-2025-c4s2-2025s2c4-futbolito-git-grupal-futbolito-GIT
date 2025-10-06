@@ -16,20 +16,20 @@ cada estudiante termine su requerimiento antes de comenzar a *mergear* los *pull
 
 ## Requerimientos (pizarrón)
 
-- **inicio** : al apretar la tecla *i* la pelota se debe quedar en el origen borde izquierdo (0,5)
+- **inicio** : al apretar la tecla *i* la pelota se debe quedar en el origen borde izquierdo (0,0).
 - **Buscarla** : al apretar la tecla *b* lionel se mueve a donde está la pelota
-
 
 ## Requerimientos (Estudiantes)
 - **Patear**: Hacer que Lionel patee la pelota al apretar la tecla *p*: La pelota se desplaza 3 posiciones
  a la derecha (o lo máximo que se pueda antes de salir de pantalla). Tip: usar el método min de los números entre el x actual de la pelota + 3 y el ancho del tablero - 1.
-Validar que la pelota se encuentre en la misma posicion que Lionel
+Validar que la pelota se encuentre en la misma posicion que Lionel.
 - **Taquito**: Hacer Lionel de un pase atrás al apretar la tecla *t*: La pelota se mueve 2 posiciones a la izquierda. (o lo máximo que se pueda mover)
   Tip: usar el método max de los números entre el x actual de la pelota - 2 y 0.
   Validar que la pelota se encuentre en la misma posición que Lionel.
 - **Camiseta** Hacer que Lionel cambie su camiseta al apretar la tecla *c*. Si tiene la camiseta titular pasará a 
 usar la suplente y viceversa. Validar que solo se puede realizar si lionel está sobre el borde izquierdo (El x de la posición debe ser 0)
 - **Levantarla** Hacer que la pelota suba por (eje y) 1 posición, y luego de 2 segundos baje nuevamente a dónde estaba. Tip: Usar un scheduler. Validar que la pelota se encuentre en la misma posicion que Lionel.
+- **Ir saque lateral** Hacer que la pelota y Leo aparezcan en el borde inferior en la misma posición ambosa, manteniendo la distancia horizontal de la pelota (eje x). Validar que Leo no se encuentre en la misma posición que la pelota.
 
 Nota: No olvidarse de hacer los tests también, son parte del requerimiento!
 Nota: Ojo con asumir en los tests que el tablero tiene el mismo tamaño que en el program. No es así. 
