@@ -23,8 +23,14 @@ object lionel {
 	}
 
 	method cambiarCamiseta() {
-		if (position.x() == 0) {
-			camisetaTitular = !camisetaTitular
+		self.validarBorde()
+		camisetaTitular = !camisetaTitular
+			  
+	}
+	
+	method validarBorde() {
+		if(not (position.x() == 0)) {
+			self.error("Lionel no esta en el borde izquierdo")
 		}
 	  
 	}
