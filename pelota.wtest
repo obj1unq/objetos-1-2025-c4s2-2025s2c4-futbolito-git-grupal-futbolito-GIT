@@ -1,8 +1,9 @@
+import wollok.game.*
 import pgmProgram.*
 import objetos.*
 
 describe "pelota" {
-  test "reubicación de la pelota" {
+  test "Pelota va al inicio y queda en la posicion (0,0)" {
     pelota.irAlInicio()
     assert.equals(game.at(0,0), pelota.position())
   }
