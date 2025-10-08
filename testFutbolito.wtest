@@ -1,0 +1,30 @@
+import wollok.game.*
+import objetos.*
+
+describe "Lionel patea la pelota" {
+    method initialize() {
+        game.width(10)
+	    game.height(10)
+        lionel.avanzar()
+    }
+
+    test "Lionel intenta patear la pelota con la pelota lejos (sin estar en la misma posicion) y falla" {
+        assert.throwsExceptionWithMessage("No puede patear porque la pelota esta lejos", { lionel.patear(pelota) })
+    }
+
+    test "Lionel esta en la misma posicion que la pelota, la patea y la pelota avanza 3 posiciones" {
+        lionel.avanzar()
+        lionel.patear(pelota)
+        assert.equals(true, pelota.estaEnPosicion(8, 5))
+    }
+
+    test "Lionel patea la pelota hasta que encuentra el final del tablero y la pelota no se va de rango" {
+        lionel.avanzar()
+        lionel.patear(pelota)
+        lionel.avanzar()
+        lionel.avanzar()
+        lionel.avanzar()
+        lionel.patear(pelota)
+        assert.equals(true, pelota.estaEnPosicion(9, 5))
+    }
+}
